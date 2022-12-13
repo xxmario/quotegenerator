@@ -16,13 +16,18 @@ body {
 }
 
 .rounded-card {
-  border-radius: 20px;
   width: auto;
   max-width: 900px;
   padding: 10px 20px;
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
   background-color: #fefefe;
+  border-radius: 20px;
   padding: 20px 30px;
+}
+
+.fa-quote-left {
+  font-size: 2.5rem;
+  
 }
 
 .quote-text {
@@ -36,6 +41,7 @@ body {
   font-weight: 500;
   font-style: italic;
   font-size: medium;
+  display: block;
 }
 
 .two-buttons {
@@ -48,11 +54,12 @@ button {
   color: #fbfafd;
   background-color: #2e2d2d;
   font-size: medium;
-  border: 1px solid #2e2d2d;
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 0 3px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 button:hover {
