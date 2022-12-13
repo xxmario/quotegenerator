@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://www.google.com/s2/u/0/favicons?domain=udemy.com"
-    />
+
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -18,11 +15,13 @@
   </head>
   <body>
     <div class="rounded-card" id="quoteCard">
-      <p class="quote-text">
+      <div class="quote-text">
         <i class="fa-solid fa-quote-left"></i>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </p>
-      <p class="quote-author">Unknown</p>
+        <span id="quote">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </span>
+      </div>
+      <span class="quote-author" id="author">Unknown</span>
       <div class="two-buttons">
         <button class="twitter" id="twitterBtn">
           <i class="fa-brands fa-twitter"></i>
@@ -30,6 +29,7 @@
         <button class="newQuote" id="newQuoteBtn">New Quote</button>
       </div>
     </div>
+    <div class="loader" id="loader"></div>
     <!-- script -->
     <script src="script.js"></script>
   </body>
