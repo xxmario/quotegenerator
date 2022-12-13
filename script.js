@@ -7,19 +7,20 @@ const loader = document.getElementById("loader");
 let allQuotes = [];
 
 function newQuote() {
-  loading();
+  showLoadingSpinner();
   const quoteId = Math.floor(Math.random() * allQuotes.length);
   quoteText.innerText = allQuotes[quoteId].text;
   quoteAuthor.innerText = "Unknown";
   if (allQuotes[quoteId].author) {
     quoteAuthor.innerText = allQuotes[quoteId].author;
   }
-  completeLoad();
+  hideLoadingSpinner();
 }
 async function loadQuotes() {
   try {
-    loading();
+    showLoadingSpinner();
     const quotesAPI = "https://type.fit/api/quotes";
+    //consider to use a proxy like heruku if it doesn't work or has a CORS error
     const response = await fetch(quotesAPI);
     allQuotes = await response.json();
     newQuote();
@@ -32,12 +33,12 @@ newQuoteButton.addEventListener("click", () => {
   newQuote();
 });
 
-function loading() {
+function showLoadingSpinner() {
   loader.hidden = false;
   quoteCard.hidden = true;
 }
 
-function completeLoad() {
+function hideLoadingSpinner() {
   loader.hidden = true;
   quoteCard.hidden = false;
 }
